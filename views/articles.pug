@@ -1,0 +1,18 @@
+extends layout
+block content
+    h1 #{title}
+    p #{department}
+    p <a href="/db/all/#{prev}"> &lt; prev</a> <a href="/db/all/#{next}">next &gt;</a>
+    div.entity
+        table
+            each item in results
+                tr
+                    td #{item.pubDate}
+                    td <a href="/db/#{item.id}">#{item.title}</a>
+                    td <a href="/db/json/#{item.id}">json</a>
+                    td <a href="#{item.guid}">web</a>
+
+
+
+
+

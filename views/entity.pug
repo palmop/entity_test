@@ -1,0 +1,15 @@
+extends layout
+block content
+    h1 #{title} 
+    p #{department}
+    <a href="/">home</a>
+    div.entity
+        table
+            tr 
+                td number of articles
+                td entity
+            
+            for e in ent
+                tr
+                    td #{e.quanti}
+                    td <a href="/entity/articles/#{e.text}">#{e.text}</a>

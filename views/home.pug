@@ -1,0 +1,12 @@
+extends layout
+block content
+    h1 #{title}
+    p #{department}
+    div.entity
+        ul
+            each entity in entities
+                li <a href="/entity/#{entity.etype}">#{entity.etype}</a>
+
+
+
+

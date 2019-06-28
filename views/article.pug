@@ -1,0 +1,18 @@
+extends layout
+block content
+    h1 #{title} 
+    p #{department}
+    p <a href="#{art.guid}">#{art.title}</a>
+    p <a href="/db/json/#{art.id}">JSON</a>
+    p   select the score: 
+        for score in [0.99, 0.9, 0.85, 0.8, 0.7, 0.6]
+            <a href="/db/#{art.id}/#{score}">#{score}</a> *
+
+    div.entpag
+        div.entity
+            table
+                for item in ent
+                    tr
+                        td <a href="/entity/#{item.etype}">#{item.etype}</a>
+                        td <a href="/entity/articles/#{item.text}">#{item.text}</a>
+                        td #{item.escore}

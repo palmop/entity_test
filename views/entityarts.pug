@@ -1,0 +1,22 @@
+extends layout
+block content
+    h1 #{title} 
+    p #{department}
+    <a href="/">home</a>
+    div.entity
+        table
+            tr 
+                td entity type
+                td date
+                td title
+                td _ get json _
+                td _ go to article _
+
+            
+            for a in arts
+                tr
+                    td 1.#{a.post_id}
+                    td #{a.post_date}
+                    td <a href="/db/#{a.itemid}">#{a.title}</a>
+                    td <a href="/db/json/#{a.itemid}">JSON</a>
+                    td <a href="#{a.guid}">web</a> 
